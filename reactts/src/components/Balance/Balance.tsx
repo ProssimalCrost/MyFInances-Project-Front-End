@@ -101,6 +101,18 @@ const Balance = ({ emitMovement, currentBalance }: BalanceProps) => {
                 {!isFormValid && (
                   <small className="error_text">Preencha nome e valor válidos.</small>
                 )}
+
+                <Button 
+                  title="Cacelar"
+                  priority="Output"
+                  action={hideInputForm}
+                />
+
+                <Button 
+                  title="Adicionar"
+                  priority="Input"
+                  action={hideInputForm}
+                />
               </div>
               <div className="actions_form_buttons_container"></div>
             </form>
