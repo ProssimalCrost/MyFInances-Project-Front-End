@@ -2,6 +2,7 @@ import type { FinanceControlProps } from "../models/Interfaces/FinanceControlPro
 import "./FinanceControl.css";
 import type { Moviment } from "../components/Moviment/Moviment";
 import Balance from "../components/Balance/Balance";
+import Expense from "../components/Expense/Expense";
 
 const FinanceControl = ({
   handleSetMovement, 
@@ -15,6 +16,7 @@ const receiveNewMoviment = (movement: Moviment) => {
 return (
       <div className="container_finances">
        <Balance currentBalance={balance} emitMovement={receiveNewMoviment}/>
+       <Expense currentBalance={balance} currentExpense={expenses} emitMoviment={receiveNewMoviment}/>
       </div>  
   );
 }
